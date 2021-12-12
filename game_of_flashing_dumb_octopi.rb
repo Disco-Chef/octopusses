@@ -43,7 +43,7 @@ class GameOfFlashingDumbOctopi
     flashes = 0
     @view.clear_frame
     (1..1000).each do |n|
-      sleep(0.7)
+      sleep(0.1)
       @grid.octopi_in_grid.each { |row| row.each(&:one_frame!) }
       @view.clear_frame
       resolve_double_digits until count_of_ten.zero?

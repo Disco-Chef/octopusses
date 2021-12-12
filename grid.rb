@@ -1,4 +1,5 @@
 require_relative 'dumb_octopus'
+require 'pp'
 
 class Grid
   attr_reader :columns, :rows, :octopi_in_grid
@@ -10,7 +11,6 @@ class Grid
   end
 
   def create_dumb_octopi
-    require 'pp'
     @octopi_in_grid = Array.new(@rows) { Array.new(@columns) }
     lines = File.read('input.txt').split("\n")
     lines.each_with_index do |row, y|
